@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>817</width>
+    <height>633</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>4</number>
+    </property>
+    <property name="topMargin">
+     <number>4</number>
+    </property>
+    <property name="rightMargin">
+     <number>4</number>
+    </property>
+    <property name="bottomMargin">
+     <number>4</number>
+    </property>
+    <property name="spacing">
+     <number>4</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="pages">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="logTab">
+       <attribute name="title">
+        <string>Журнал</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="monitorTab">
+       <attribute name="title">
+        <string>Монитор</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QSplitter" name="splitter">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QWidget" name="verticalLayoutWidget">
+           <layout class="QVBoxLayout" name="verticalLayoutLog">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayoutLog">
+              <item>
+               <widget class="QLabel" name="lblEnentMess_txt">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>62</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>45</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Cообщения
+о событиях:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pbClear">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Очистить</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="chckBxNoize">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="toolTip">
+                 <string>Вывод сообщений
+о помехах</string>
+                </property>
+                <property name="text">
+                 <string>Помеха</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>0</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTextBrowser" name="txtEditSimpleLog">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>231</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="baseSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextEdit" name="txtEditSwap"/>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="grpBxCommon">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>231</width>
+                <height>169</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Команды</string>
+              </property>
+              <widget class="QComboBox" name="cmbBxCmnd">
+               <property name="geometry">
+                <rect>
+                 <x>5</x>
+                 <y>40</y>
+                 <width>220</width>
+                 <height>22</height>
+                </rect>
+               </property>
+              </widget>
+              <widget class="QComboBox" name="cmbBxCls">
+               <property name="geometry">
+                <rect>
+                 <x>70</x>
+                 <y>15</y>
+                 <width>155</width>
+                 <height>22</height>
+                </rect>
+               </property>
+               <item>
+                <property name="text">
+                 <string>0 системные ОУ</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>1 извещатели и датчики</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>2 исполнительные ОУ</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>3 интерфейсные ОУ</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>4 аналоговые ОУ</string>
+                </property>
+               </item>
+              </widget>
+              <widget class="QLineEdit" name="leParams">
+               <property name="geometry">
+                <rect>
+                 <x>70</x>
+                 <y>93</y>
+                 <width>155</width>
+                 <height>22</height>
+                </rect>
+               </property>
+              </widget>
+              <widget class="QCheckBox" name="chkBxTimer">
+               <property name="geometry">
+                <rect>
+                 <x>10</x>
+                 <y>145</y>
+                 <width>56</width>
+                 <height>18</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Таймер</string>
+               </property>
+              </widget>
+              <widget class="QSpinBox" name="spnBxMultiplicator">
+               <property name="geometry">
+                <rect>
+                 <x>70</x>
+                 <y>141</y>
+                 <width>42</width>
+                 <height>24</height>
+                </rect>
+               </property>
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>100</number>
+               </property>
+               <property name="value">
+                <number>1</number>
+               </property>
+              </widget>
+              <widget class="QLabel" name="lblMultiplicator">
+               <property name="geometry">
+                <rect>
+                 <x>115</x>
+                 <y>139</y>
+                 <width>25</width>
+                 <height>25</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>x100
+мсек</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="pbSend">
+               <property name="geometry">
+                <rect>
+                 <x>150</x>
+                 <y>141</y>
+                 <width>75</width>
+                 <height>23</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Отправить</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="lblParams">
+               <property name="geometry">
+                <rect>
+                 <x>7</x>
+                 <y>98</y>
+                 <width>61</width>
+                 <height>16</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Параметры:</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="lblClsOU">
+               <property name="geometry">
+                <rect>
+                 <x>7</x>
+                 <y>20</y>
+                 <width>61</width>
+                 <height>16</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Класс ОУ:</string>
+               </property>
+              </widget>
+              <widget class="QComboBox" name="cmbBxSysCmnd">
+               <property name="geometry">
+                <rect>
+                 <x>5</x>
+                 <y>66</y>
+                 <width>221</width>
+                 <height>22</height>
+                </rect>
+               </property>
+              </widget>
+              <widget class="QCheckBox" name="chkBxRepeat">
+               <property name="geometry">
+                <rect>
+                 <x>10</x>
+                 <y>120</y>
+                 <width>181</width>
+                 <height>18</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Запрос повтора команды (0x80)</string>
+               </property>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="verticalLayoutWidget_2">
+           <layout class="QVBoxLayout" name="verticalLayoutTable">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayoutTable">
+              <item>
+               <widget class="QPushButton" name="pbBind">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Связать</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pbClearCommStack">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Очистить стэк команд</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pbCancel">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Отмена</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pbSet">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Установить</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Expanding</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>100</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="treeDevsTab">
+       <attribute name="title">
+        <string>Дерево устройств</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pbLoad">
+          <property name="text">
+           <string>Загрузить дерево устройств</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="pbTake">
+          <property name="text">
+           <string>Забрать у роутера</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="pbCancelTree">
+          <property name="text">
+           <string>Отмена</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QProgressBar" name="progressBarTree">
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="4">
+         <widget class="QTreeView" name="treeView">
+          <property name="dragEnabled">
+           <bool>true</bool>
+          </property>
+          <property name="dragDropOverwriteMode">
+           <bool>true</bool>
+          </property>
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::DragDrop</enum>
+          </property>
+          <property name="defaultDropAction">
+           <enum>Qt::MoveAction</enum>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::ExtendedSelection</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>817</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="actExit"/>
+   </widget>
+   <widget class="QMenu" name="menuSupport">
+    <property name="title">
+     <string>Действия</string>
+    </property>
+    <addaction name="actUpdate"/>
+    <addaction name="actRestart"/>
+    <addaction name="actSetNetParams"/>
+    <addaction name="actLoad"/>
+    <addaction name="actTree"/>
+   </widget>
+   <widget class="QMenu" name="menuConnect">
+    <property name="title">
+     <string>Подключение</string>
+    </property>
+    <addaction name="actConnectPort"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Помощь</string>
+    </property>
+    <addaction name="actHelp"/>
+    <addaction name="actAbout"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Вид</string>
+    </property>
+    <addaction name="act_0"/>
+    <addaction name="act_1"/>
+    <addaction name="act_2"/>
+    <addaction name="act_3"/>
+    <addaction name="act_4"/>
+    <addaction name="act_5"/>
+    <addaction name="act_6"/>
+    <addaction name="act_7"/>
+    <addaction name="act_8"/>
+    <addaction name="act_9"/>
+    <addaction name="act_10"/>
+    <addaction name="act_11"/>
+    <addaction name="act_12"/>
+    <addaction name="act_13"/>
+    <addaction name="act_14"/>
+    <addaction name="act_15"/>
+    <addaction name="act_16"/>
+    <addaction name="act_17"/>
+    <addaction name="act_18"/>
+    <addaction name="act_19"/>
+    <addaction name="act_20"/>
+    <addaction name="act_21"/>
+    <addaction name="act_22"/>
+    <addaction name="act_23"/>
+    <addaction name="act_24"/>
+    <addaction name="act_25"/>
+    <addaction name="separator"/>
+    <addaction name="act_showHideLog"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSupport"/>
+   <addaction name="menuConnect"/>
+   <addaction name="menu"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actExit">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+  <action name="actUpdate">
+   <property name="text">
+    <string>Обновить</string>
+   </property>
+  </action>
+  <action name="actRestart">
+   <property name="text">
+    <string>Рестарт БРШС</string>
+   </property>
+  </action>
+  <action name="actUpdateBRHS">
+   <property name="text">
+    <string>Обновить</string>
+   </property>
+  </action>
+  <action name="actSetNetParams">
+   <property name="text">
+    <string>Установить параметры сети</string>
+   </property>
+  </action>
+  <action name="actConnectPort">
+   <property name="text">
+    <string>Подключить порт</string>
+   </property>
+  </action>
+  <action name="actHelp">
+   <property name="text">
+    <string>Справка</string>
+   </property>
+  </action>
+  <action name="actAbout">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+  <action name="actLoad">
+   <property name="text">
+    <string>Загрузить прошивку</string>
+   </property>
+  </action>
+  <action name="actTree">
+   <property name="text">
+    <string>Показать дерево устройств</string>
+   </property>
+  </action>
+  <action name="act_0">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Сетевой адрес</string>
+   </property>
+  </action>
+  <action name="act_1">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Основное</string>
+   </property>
+  </action>
+  <action name="act_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Уровень сигнала</string>
+   </property>
+  </action>
+  <action name="act_4">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Состояние канала</string>
+   </property>
+  </action>
+  <action name="act_5">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Параметры связи с ОУ</string>
+   </property>
+  </action>
+  <action name="act_6">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Кодировние данных</string>
+   </property>
+  </action>
+  <action name="act_7">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Индикация опознавания</string>
+   </property>
+  </action>
+  <action name="act_8">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Звуковая индикация состояния</string>
+   </property>
+  </action>
+  <action name="act_9">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Световая индикация состояния</string>
+   </property>
+  </action>
+  <action name="act_10">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Охрана</string>
+   </property>
+  </action>
+  <action name="act_11">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Пороги срабатывания Грань-РК</string>
+   </property>
+  </action>
+  <action name="act_12">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Верхний порог срабатывания аналоговых ОУ</string>
+   </property>
+  </action>
+  <action name="act_13">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Нижний порог срабатывания анаоговых ОУ</string>
+   </property>
+  </action>
+  <action name="act_14">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Режим работы</string>
+   </property>
+  </action>
+  <action name="act_15">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Время работы</string>
+   </property>
+  </action>
+  <action name="act_16">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Время активной фазы режима</string>
+   </property>
+  </action>
+  <action name="act_17">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Время пассивной фазы режима</string>
+   </property>
+  </action>
+  <action name="act_18">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Данные</string>
+   </property>
+  </action>
+  <action name="act_19">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Статус выполнения команды</string>
+   </property>
+  </action>
+  <action name="act_3">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Состояние ОУ</string>
+   </property>
+  </action>
+  <action name="act_showHideLog">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Окно сообщений о событиях</string>
+   </property>
+  </action>
+  <action name="act_20">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Связь</string>
+   </property>
+  </action>
+  <action name="act_21">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Резервное питание</string>
+   </property>
+  </action>
+  <action name="act_22">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Основное питание</string>
+   </property>
+  </action>
+  <action name="act_23">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Вскрытие</string>
+   </property>
+  </action>
+  <action name="act_24">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Запыление ПД-РК</string>
+   </property>
+  </action>
+  <action name="act_25">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Неисправность дополнительного питания</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

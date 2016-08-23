@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogBinding</class>
+ <widget class="QDialog" name="DialogBinding">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>394</width>
+    <height>154</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="lblAnyAddress_txt">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>66</y>
+     <width>42</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Адрес
+канала:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblDevType_txt">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>85</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Тип устройства:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmbBxTypeDev">
+   <property name="geometry">
+    <rect>
+     <x>96</x>
+     <y>97</y>
+     <width>293</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbAnyClass_txt">
+   <property name="geometry">
+    <rect>
+     <x>195</x>
+     <y>72</y>
+     <width>35</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Класс:</string>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="progressBarBinding">
+   <property name="geometry">
+    <rect>
+     <x>8</x>
+     <y>126</y>
+     <width>301</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>1</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="format">
+    <string>Ожидание ответа на запрос привязки от ОУ: %p сек</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbCancelStart">
+   <property name="geometry">
+    <rect>
+     <x>311</x>
+     <y>125</y>
+     <width>78</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Связать</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblBindPeriod_txt">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>8</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Период связи:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblControlPeriod">
+   <property name="geometry">
+    <rect>
+     <x>112</x>
+     <y>34</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>lblControlPeriod</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblSkipNum_txt">
+   <property name="geometry">
+    <rect>
+     <x>248</x>
+     <y>0</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Допустимое
+число пропусков:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmbBxBindPeriod">
+   <property name="geometry">
+    <rect>
+     <x>96</x>
+     <y>6</y>
+     <width>91</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spnBxSkipNum">
+   <property name="geometry">
+    <rect>
+     <x>343</x>
+     <y>6</y>
+     <width>46</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>3</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblControlPeriod_txt">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>34</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Период контроля:</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>53</y>
+     <width>376</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmbBxAddress">
+   <property name="geometry">
+    <rect>
+     <x>96</x>
+     <y>69</y>
+     <width>91</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Любой адрес</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QSpinBox" name="spnBxClass">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>69</y>
+     <width>35</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>4</number>
+   </property>
+   <property name="value">
+    <number>1</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblCoiuntBinds">
+   <property name="geometry">
+    <rect>
+     <x>277</x>
+     <y>60</y>
+     <width>65</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Число
+связываний:</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spnBxCountBinds">
+   <property name="geometry">
+    <rect>
+     <x>343</x>
+     <y>70</y>
+     <width>46</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

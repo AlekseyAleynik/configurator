@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/a.JPG</file>
+        <file>images/b.JPG</file>
+        <file>images/in_g.JPG</file>
+        <file>images/in_r.JPG</file>
+        <file>images/in_y.JPG</file>
+        <file>images/out_g.JPG</file>
+        <file>images/out_y.JPG</file>
+        <file>images/pics/sign_level.png</file>
+        <file>images/pics/sound.png</file>
+        <file>images/pics/guard.png</file>
+        <file>images/pics/lamp.png</file>
+        <file>images/pics/binarycode.png</file>
+    </qresource>
+</RCC>
